@@ -1,25 +1,63 @@
 aid: vercore-com
+
 name: Proemion
+
 description: 'Proemion is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
   backed by battery-ventures) and added to the network as a stub for full-pipeline profiling.'
+
 url: https://raw.githubusercontent.com/api-evangelist/vercore-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- battery-ventures
+
 common:
+- type: Hosts
+  url: hosts/vercore-com-hosts.yml
+- type: PrivacyPolicy
+  url: https://www.vercore.com/privacy-policy.html
+- type: DomainSecurity
+  url: security/vercore-com-domain-security.yml
 - type: Website
   url: https://www.vercore.com/
+
+apis: []
+
+x-backed-by:
+- battery-ventures
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.vercore.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
